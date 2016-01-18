@@ -52,14 +52,9 @@ func (mr *MapReduce) RunMaster() *list.List {
             }
         }
     }()
-    
-    
+        
     quitMap := make(chan int)
-    
-    //fmt.Printf("# availableWorkers = %d\n", len(mr.Workers))
-    //for k := range mr.Workers {
-      //  mr.availableWorkers <- k
-    //}    
+              
     mapJobNum, reduceJobNum := 0, 0
     for mapJobNum < mr.nMap{                         
         worker := <- mr.availableWorkers
@@ -67,7 +62,7 @@ func (mr *MapReduce) RunMaster() *list.List {
         args = &DoJobArgs{mr.file, Map, mapJobNum, mr.nReduce}
         mapJobNum++
         var reply DoJobReply                
-        go func(currentMapJob int) {
+        go func() {
             for !reply.OK {
                 ok := call(mr.Workers[worker].address, "Worker.DoJob", args, &reply)
                 if ok == false {
@@ -82,7 +77,7 @@ func (mr *MapReduce) RunMaster() *list.List {
                     }
                 }
             }
-        }(mapJobNum - 1)                   
+        }()                   
     }
     <- quitMap
     
@@ -94,7 +89,7 @@ func (mr *MapReduce) RunMaster() *list.List {
         args = &DoJobArgs{mr.file, Reduce, reduceJobNum, mr.nMap}
         reduceJobNum++
         var reply DoJobReply                
-        go func(currentReduceJob int) {
+        go func() {
             for !reply.OK { 
                 ok := call(mr.Workers[worker].address, "Worker.DoJob", args, &reply)
                 if ok == false {
@@ -107,7 +102,7 @@ func (mr *MapReduce) RunMaster() *list.List {
                     }  
                 }
             }
-        }(reduceJobNum - 1)                   
+        }()                   
     }
     <- quitReduce
     
