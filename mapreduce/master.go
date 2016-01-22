@@ -56,6 +56,7 @@ func (mr *MapReduce) RunMaster() *list.List {
     quitMap := make(chan int)
               
     mapJobNum, reduceJobNum := 0, 0
+    
     for mapJobNum < mr.nMap{                         
         worker := <- mr.availableWorkers
         var args *DoJobArgs

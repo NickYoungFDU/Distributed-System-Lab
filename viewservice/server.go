@@ -18,14 +18,74 @@ type ViewServer struct {
 
 
 	// Your declarations here.
+    
+    currentView View
+    
+    recentPing map[string]time.Time        
+    
+    hasPrimaryAcked bool
+}
+
+func (vs *ViewServer) changeView(n uint, p, b string) {
+    vs.currentView.Viewnum = n
+    vs.currentView.Primary = p
+    vs.currentView.Backup = b
+    vs.hasPrimaryAcked = false
+}
+
+
+func (vs *ViewServer) PromoteBackup() {
+    if !vs.hasPrimaryAcked || vs.currentView.Backup == "" {
+        return
+    }
+    newBackup := ""
+    for k := range vs.recentPing {
+        if k != vs.currentView.Primary && k != vs.currentView.Backup {
+            newBackup = k
+            break
+        }
+    }
+    vs.changeView(vs.currentView.Viewnum + 1, vs.currentView.Backup, newBackup)    
+}
+
+func (vs *ViewServer) RemoveBackup() {
+    vs.changeView(vs.currentView.Viewnum + 1, vs.currentView.Primary, "")
 }
 
 //
 // server Ping RPC handler.
 //
 func (vs *ViewServer) Ping(args *PingArgs, reply *PingReply) error {
+    
+    
+    
+    clientId, clientViewNum := args.Me, args.Viewnum
+    
+    vs.mu.Lock()
+    
+    vs.recentPing[clientId] = time.Now()     
 
 	// Your code here.
+    
+    switch clientId {
+        case vs.currentView.Primary:
+            if clientViewNum == vs.currentView.Viewnum {
+                vs.hasPrimaryAcked = true
+            } else if clientViewNum == 0 {
+                vs.PromoteBackup()
+            }
+        default:
+            if vs.currentView.Primary == "" {
+                vs.changeView(1, clientId, "")
+            } else if vs.currentView.Backup == "" {
+                vs.changeView(vs.currentView.Viewnum + 1, vs.currentView.Primary, clientId)
+            }
+            
+    }    
+    
+    reply.View = View(vs.currentView)   
+           
+    vs.mu.Unlock()           
 
 	return nil
 }
@@ -36,6 +96,9 @@ func (vs *ViewServer) Ping(args *PingArgs, reply *PingReply) error {
 func (vs *ViewServer) Get(args *GetArgs, reply *GetReply) error {
 
 	// Your code here.
+    vs.mu.Lock()
+    reply.View = View(vs.currentView)
+    vs.mu.Unlock()
 
 	return nil
 }
@@ -49,6 +112,19 @@ func (vs *ViewServer) Get(args *GetArgs, reply *GetReply) error {
 func (vs *ViewServer) tick() {
 
 	// Your code here.
+    
+    vs.mu.Lock()
+    
+    primary, backup := vs.currentView.Primary, vs.currentView.Backup
+        
+    if time.Since(vs.recentPing[primary]) > DeadPings * PingInterval {
+        vs.PromoteBackup()
+    }  
+    if time.Since(vs.recentPing[backup]) > DeadPings * PingInterval {
+        vs.RemoveBackup()
+    }
+    
+    vs.mu.Unlock()
 }
 
 //
@@ -77,6 +153,8 @@ func StartServer(me string) *ViewServer {
 	vs := new(ViewServer)
 	vs.me = me
 	// Your vs.* initializations here.
+    vs.currentView = View{0, "", ""}
+    vs.recentPing = make(map[string]time.Time)    
 
 	// tell net/rpc about our RPC server and handlers.
 	rpcs := rpc.NewServer()

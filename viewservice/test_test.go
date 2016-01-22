@@ -122,7 +122,7 @@ func Test1(t *testing.T) {
 
 	{
 		vx, _ := ck2.Get()
-		ck2.Ping(vx.Viewnum)
+		ck2.Ping(vx.Viewnum)                
 		for i := 0; i < DeadPings*2; i++ {
 			ck3.Ping(0)
 			v, _ := ck1.Ping(vx.Viewnum)
@@ -187,13 +187,13 @@ func Test1(t *testing.T) {
 		for i := 0; i < DeadPings*3; i++ {
 			ck1.Ping(0)
 			ck3.Ping(vx.Viewnum)
-			v, _ := ck1.Get()
+			v, _ := ck1.Get()            
 			if v.Viewnum > vx.Viewnum {
 				break
 			}
 			time.Sleep(PingInterval)
 		}
-		check(t, ck1, ck3.me, ck1.me, vx.Viewnum+1)
+		check(t, ck1, ck3.me, ck1.me, vx.Viewnum+1)        
 		vy, _ := ck1.Get()
 		// ck3 is the primary, but it never acked.
 		// let ck3 die. check that ck1 is not promoted.
