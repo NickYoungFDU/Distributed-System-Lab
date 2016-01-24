@@ -12,8 +12,6 @@ import "os"
 import "syscall"
 import "math/rand"
 
-
-
 type PBServer struct {
 	mu         sync.Mutex
 	l          net.Listener
@@ -22,13 +20,52 @@ type PBServer struct {
 	me         string
 	vs         *viewservice.Clerk
 	// Your declarations here.
+    
+    currentView viewservice.View
+    identity Identity
+    database map[string]string
 }
 
+func (pb *PBServer) Transfer(args *TransferArgs, reply *TransferReply) error {
+    sender := args.Sender
+    if sender == Primary && pb.identity == Backup {
+        pb.database = args.Database
+        reply.Err = OK
+    } else {
+        reply.Err = ErrWrongServer
+    }
+    return nil
+}
 
 func (pb *PBServer) Get(args *GetArgs, reply *GetReply) error {
 
 	// Your code here.
-
+    sender := args.Sender
+    if sender == Client {
+        if pb.identity == Primary {
+            key := args.Key
+            v, ok := pb.database[key]
+            if ok {
+                reply.Value = v
+                reply.Err = OK
+            } else {
+                reply.Value = ""
+                reply.Err = ErrNoKey
+            }        
+            // forward this operation to the backup
+            argsx := GetArgs{key, Primary}
+            var replyx GetReply            
+            call(pb.currentView.Backup, "Get", &argsx, &replyx)
+        } else {
+            reply.Value = ""
+            reply.Err = ErrWrongServer
+        }        
+    } else if sender == Primary {
+        if pb.identity != Backup {
+            reply.Value = ""
+            reply.Err = ErrWrongServer
+        }
+    }    
 	return nil
 }
 
@@ -36,11 +73,52 @@ func (pb *PBServer) Get(args *GetArgs, reply *GetReply) error {
 func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error {
 
 	// Your code here.
-
+    sender := args.Sender
+    if sender == Client {
+        if pb.identity == Primary {
+            key, value, op := args.Key, args.Value, args.Op
+            if op == "Put" {
+                pb.database[key] = value               
+            } else {
+                v, ok := pb.database[key]
+                if ok {
+                    pb.database[key] = pb.database[key] + value
+                } else {
+                    pb.database[key] = value
+                }
+            }
+            // forward this operation to the backup
+            argsx := PutAppendArgs{key, value, Primary, op}
+            var replyx PutAppendReply            
+            call(pb.currentView.Backup, "PutAppend", &argsx, &replyx)
+        } else {
+            reply.Value = ""
+            reply.Err = ErrWrongServer
+        }        
+    } else if sender == Primary {
+        if pb.identity != Backup {
+            reply.Value = ""
+            reply.Err = ErrWrongServer
+        }
+    } 
 
 	return nil
 }
 
+func compareView(v1, v2 viewservice.View) {
+    return v1.Viewnum == v2.Viewnum && v1.Primary == v2.Primary && v1.Backup == v2.Backup
+}
+
+
+func (pb *PBServer) getIdentity(view viewservice.View) Identity {
+    if view.Primary == pb.me {
+        return Primary
+    } else if view.Backup == pb.me {
+        return Backup
+    } else {
+        return Idle
+    }
+}
 
 //
 // ping the viewserver periodically.
@@ -51,6 +129,15 @@ func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error 
 func (pb *PBServer) tick() {
 
 	// Your code here.
+    vx, _ := pb.vs.Get()
+    view, _ := pb.vs.Ping(vx.Viewnum)
+    pb.identity = pb.getIdentity(view)
+    if pb.identity == Primary && pb.currentView != nil && pb.currentView.Backup != view.Backup {
+        args := TransferArgs{pb.database, Primary}
+        var reply TransferReply
+        call(view.Backup, "Transfer", &args, &reply)
+    }
+    pb.currentView = view
 }
 
 // tell the server to shut itself down.
@@ -84,6 +171,9 @@ func StartServer(vshost string, me string) *PBServer {
 	pb.me = me
 	pb.vs = viewservice.MakeClerk(me, vshost)
 	// Your pb.* initializations here.
+    pb.identity = Idle
+    pb.database = make(map[string]string)
+    pb.currentView = viewservice.View{0, "", ""}    
 
 	rpcs := rpc.NewServer()
 	rpcs.Register(pb)
