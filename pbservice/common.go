@@ -1,5 +1,7 @@
 package pbservice
 
+import "fmt"
+
 const (
 	OK             = "OK"
 	ErrNoKey       = "ErrNoKey"
@@ -22,7 +24,8 @@ type PutAppendArgs struct {
 	Key   string
 	Value string
 	// You'll have to add definitions here.
-
+    
+    Id    int64
     Sender Identity
     Op  string
 	// Field names must start with capital letters,
@@ -54,4 +57,15 @@ type TransferArgs struct {
 
 type TransferReply struct {
     Err Err
+}
+
+
+// Debugging
+var Debug = 0
+
+func DPrintf(format string, a ...interface{}) (n int, err error) {
+	if Debug == 12 {
+		n, err = fmt.Printf(format, a...)
+	}
+	return
 }

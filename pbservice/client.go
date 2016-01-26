@@ -4,13 +4,16 @@ import "viewservice"
 import "net/rpc"
 import "fmt"
 
+
 import "crypto/rand"
 import "math/big"
+
 
 
 type Clerk struct {
 	vs *viewservice.Clerk
 	// Your declarations here
+    currentView viewservice.View
 }
 
 // this may come in handy.
@@ -25,7 +28,8 @@ func MakeClerk(vshost string, me string) *Clerk {
 	ck := new(Clerk)
 	ck.vs = viewservice.MakeClerk(me, vshost)
 	// Your ck.* initializations here
-
+    ck.currentView = viewservice.View{0, "", ""}
+    
 	return ck
 }
 
@@ -64,6 +68,11 @@ func call(srv string, rpcname string,
 	return false
 }
 
+
+func (ck *Clerk) UpdateView() {
+    ck.currentView, _ = ck.vs.Get()
+}
+
 //
 // fetch a key's value from the current primary;
 // if they key has never been set, return "".
@@ -74,8 +83,22 @@ func call(srv string, rpcname string,
 func (ck *Clerk) Get(key string) string {
 
 	// Your code here.
-
-	return "???"
+    args, reply := GetArgs{key, Client}, GetReply{}
+    if ck.currentView.Viewnum == 0 {
+        ck.UpdateView()
+    }
+                
+    ok := call(ck.currentView.Primary, "PBServer.Get", &args, &reply)
+    for !ok {
+        ck.UpdateView()        
+        
+        ok = call(ck.currentView.Primary, "PBServer.Get", &args, &reply)
+    }    
+    if reply.Err == OK {        
+        return reply.Value
+    } else {
+        return ck.Get(key)
+    }
 }
 
 //
@@ -84,6 +107,20 @@ func (ck *Clerk) Get(key string) string {
 func (ck *Clerk) PutAppend(key string, value string, op string) {
 
 	// Your code here.
+    id := nrand()
+    args, reply := PutAppendArgs{key, value, id, Client, op}, PutAppendReply{}    
+    if ck.currentView.Viewnum == 0 {
+        ck.currentView, _ = ck.vs.Get()
+    }
+        
+    
+    ok := call(ck.currentView.Primary, "PBServer.PutAppend", &args, &reply)    
+    DPrintf("chp0.0\n")    
+    for !ok {
+        ck.UpdateView()
+        ok = call(ck.currentView.Primary, "PBServer.PutAppend", &args, &reply)
+    }
+    DPrintf("success with server %s, key = %s, value = %s, reply = %s\n", ck.currentView.Primary, key, value, reply.Err)           
 }
 
 //

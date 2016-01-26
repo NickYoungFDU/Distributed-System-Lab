@@ -24,9 +24,12 @@ type PBServer struct {
     currentView viewservice.View
     identity Identity
     database map[string]string
+    seenRPCs map[int64]bool
 }
 
 func (pb *PBServer) Transfer(args *TransferArgs, reply *TransferReply) error {
+    pb.mu.Lock()
+    defer pb.mu.Unlock()
     sender := args.Sender
     if sender == Primary && pb.identity == Backup {
         pb.database = args.Database
@@ -38,7 +41,8 @@ func (pb *PBServer) Transfer(args *TransferArgs, reply *TransferReply) error {
 }
 
 func (pb *PBServer) Get(args *GetArgs, reply *GetReply) error {
-
+    pb.mu.Lock()
+    defer pb.mu.Unlock()
 	// Your code here.
     sender := args.Sender
     if sender == Client {
@@ -55,7 +59,7 @@ func (pb *PBServer) Get(args *GetArgs, reply *GetReply) error {
             // forward this operation to the backup
             argsx := GetArgs{key, Primary}
             var replyx GetReply            
-            call(pb.currentView.Backup, "Get", &argsx, &replyx)
+            call(pb.currentView.Backup, "PBServer.Get", &argsx, &replyx)
         } else {
             reply.Value = ""
             reply.Err = ErrWrongServer
@@ -69,44 +73,78 @@ func (pb *PBServer) Get(args *GetArgs, reply *GetReply) error {
 	return nil
 }
 
+func (pb *PBServer) PrintDatabase() {
+    for k, v := range pb.database {
+        fmt.Printf("key:%s, value:%s\n", k, v)
+    }
+}
 
-func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error {
-
-	// Your code here.
-    sender := args.Sender
-    if sender == Client {
-        if pb.identity == Primary {
-            key, value, op := args.Key, args.Value, args.Op
+func (pb *PBServer) DoPutAppend(key, value, op string, id int64) {
             if op == "Put" {
                 pb.database[key] = value               
             } else {
-                v, ok := pb.database[key]
+                _, ok := pb.database[key]
                 if ok {
                     pb.database[key] = pb.database[key] + value
                 } else {
                     pb.database[key] = value
                 }
             }
+            pb.seenRPCs[id] = true
+            //pb.PrintDatabase()
             // forward this operation to the backup
-            argsx := PutAppendArgs{key, value, Primary, op}
-            var replyx PutAppendReply            
-            call(pb.currentView.Backup, "PutAppend", &argsx, &replyx)
-        } else {
-            reply.Value = ""
-            reply.Err = ErrWrongServer
-        }        
-    } else if sender == Primary {
-        if pb.identity != Backup {
-            reply.Value = ""
-            reply.Err = ErrWrongServer
-        }
-    } 
-
-	return nil
+            argsx := PutAppendArgs{key, value, id, Primary, op}
+            var replyx PutAppendReply  
+            DPrintf("Yeah3\n")   
+            DPrintf("pb.currentView.Backup:%s\n", pb.currentView.Backup)            
+            call(pb.currentView.Backup, "PBServer.PutAppend", &argsx, &replyx)    
 }
 
-func compareView(v1, v2 viewservice.View) {
-    return v1.Viewnum == v2.Viewnum && v1.Primary == v2.Primary && v1.Backup == v2.Backup
+func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error {
+    pb.mu.Lock()
+    defer pb.mu.Unlock()
+	// Your code here.
+    id := args.Id
+    completed, seen := pb.seenRPCs[id]
+    if seen && completed{
+        DPrintf("checkpoint, database[%s] = %s\n", args.Key, pb.database[args.Key])
+        return nil
+    } else {
+        pb.seenRPCs[id] = false
+    }
+    sender := args.Sender
+    if sender == Client {
+        key, value, op := args.Key, args.Value, args.Op
+        DPrintf("Yeah\n")
+        if pb.identity == Primary {
+            DPrintf("Yeah1\n")
+            pb.DoPutAppend(key, value, op, id)
+        } else if v, _ := pb.vs.Get(); v.Primary == pb.me {
+            DPrintf("Yeah2\n")
+            pb.identity = Primary  
+            pb.currentView = v      
+            pb.DoPutAppend(key, value, op, id)                
+        } else {
+            reply.Err = ErrWrongServer
+        }
+    } else if sender == Primary {
+        if pb.identity != Backup {            
+            reply.Err = ErrWrongServer
+        } else {
+            key, value, op := args.Key, args.Value, args.Op
+            if op == "Put" {
+                pb.database[key] = value               
+            } else {
+                _, ok := pb.database[key]
+                if ok {
+                    pb.database[key] = pb.database[key] + value
+                } else {
+                    pb.database[key] = value
+                }
+            }                        
+        }
+    }     
+	return nil
 }
 
 
@@ -127,15 +165,17 @@ func (pb *PBServer) getIdentity(view viewservice.View) Identity {
 //   manage transfer of state from primary to new backup.
 //
 func (pb *PBServer) tick() {
-
+    pb.mu.Lock()
+    defer pb.mu.Unlock()
 	// Your code here.
     vx, _ := pb.vs.Get()
     view, _ := pb.vs.Ping(vx.Viewnum)
     pb.identity = pb.getIdentity(view)
-    if pb.identity == Primary && pb.currentView != nil && pb.currentView.Backup != view.Backup {
+    //fmt.Printf("I'm %s, and I'm a %s\n", pb.me, pb.identity)
+    if pb.identity == Primary && pb.currentView.Backup != view.Backup {
         args := TransferArgs{pb.database, Primary}
         var reply TransferReply
-        call(view.Backup, "Transfer", &args, &reply)
+        call(view.Backup, "PBServer.Transfer", &args, &reply)
     }
     pb.currentView = view
 }
@@ -173,6 +213,7 @@ func StartServer(vshost string, me string) *PBServer {
 	// Your pb.* initializations here.
     pb.identity = Idle
     pb.database = make(map[string]string)
+    pb.seenRPCs = make(map[int64]bool)
     pb.currentView = viewservice.View{0, "", ""}    
 
 	rpcs := rpc.NewServer()

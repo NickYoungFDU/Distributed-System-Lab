@@ -1,0 +1,2436 @@
+Test: Put() immediately after backup failure ...
+  ... Passed
+Test: Put() immediately after primary failure ...
+  ... Passed
+Test: Concurrent Put()s to the same key ...
+  ... Passed
+Test: Concurrent Append()s to the same key ...
+  ... Passed
+Test: Concurrent Put()s to the same key; unreliable ...
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+connection is shut down
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-csu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-csu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-csu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+connection is shut down
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-csu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-csu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-csu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-csu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+  ... Passed
+Test: Repeated failures/restarts ...
+read unix @->/var/tmp/824-1000/pb-20857-rc-1: read: connection reset by peer
+  ... Put/Gets done ... 
+  ... Passed
+Test: Repeated failures/restarts with concurrent updates to same key; unreliable ...
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-3: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-3: write: broken pipe
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-3: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-3: write: broken pipe
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-3: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-3: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-3: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-3: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-20857-rcu-1: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-20857-rcu-1: write: broken pipe
+  ... Appends done ... 
+--- FAIL: TestRepeatedCrashUnreliable (21.61s)
+	test_test.go:440: missing element in Append result
+Test: Old primary does not serve Gets ...
+  ... Passed
+Test: Partitioned old primary does not complete Gets ...
+read unix @->/var/tmp/824-1000/pb-20857-part1-1: read: connection reset by peer
+  ... Passed
+FAIL
+exit status 1
+FAIL	pbservice	107.902s

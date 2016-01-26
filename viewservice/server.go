@@ -35,7 +35,7 @@ func (vs *ViewServer) changeView(n uint, p, b string) {
 
 
 func (vs *ViewServer) PromoteBackup() {
-    if !vs.hasPrimaryAcked || vs.currentView.Backup == "" {
+    if !vs.hasPrimaryAcked {
         return
     }
     newBackup := ""
@@ -60,6 +60,7 @@ func (vs *ViewServer) Ping(args *PingArgs, reply *PingReply) error {
     
     
     clientId, clientViewNum := args.Me, args.Viewnum
+    
     
     vs.mu.Lock()
     
@@ -119,6 +120,7 @@ func (vs *ViewServer) tick() {
         
     if time.Since(vs.recentPing[primary]) > DeadPings * PingInterval {
         vs.PromoteBackup()
+        //fmt.Printf("Current Primary(Promoted):%s\n", vs.currentView.Primary)
     }  
     if time.Since(vs.recentPing[backup]) > DeadPings * PingInterval {
         vs.RemoveBackup()
