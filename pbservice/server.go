@@ -31,9 +31,13 @@ func (pb *PBServer) Transfer(args *TransferArgs, reply *TransferReply) error {
     pb.mu.Lock()
     defer pb.mu.Unlock()
     sender := args.Sender
+    pb.updateView()
     if sender == Primary && pb.identity == Backup {
         pb.database = args.Database
+        pb.seenRPCs = args.SeenRPCs
         reply.Err = OK
+        fmt.Printf("Transfer to %s success!\n", pb.me)
+        pb.PrintDatabase()
     } else {
         reply.Err = ErrWrongServer
     }
@@ -94,10 +98,17 @@ func (pb *PBServer) DoPutAppend(key, value, op string, id int64) {
             //pb.PrintDatabase()
             // forward this operation to the backup
             argsx := PutAppendArgs{key, value, id, Primary, op}
-            var replyx PutAppendReply  
-            DPrintf("Yeah3\n")   
-            DPrintf("pb.currentView.Backup:%s\n", pb.currentView.Backup)            
-            call(pb.currentView.Backup, "PBServer.PutAppend", &argsx, &replyx)    
+            var replyx PutAppendReply     
+            if pb.currentView.Backup == "" {
+                return
+            }                             
+            ok := call(pb.currentView.Backup, "PBServer.PutAppend", &argsx, &replyx)
+            //call(pb.currentView.Backup, "PBServer.PutAppend", &argsx, &replyx)
+            for !ok {
+                fmt.Printf("2.stuck here!!!!!!!!!!1\n")
+                pb.updateView()
+                ok = call(pb.currentView.Backup, "PBServer.PutAppend", &argsx, &replyx)
+            }    
 }
 
 func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error {
@@ -106,21 +117,17 @@ func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error 
 	// Your code here.
     id := args.Id
     completed, seen := pb.seenRPCs[id]
-    if seen && completed{
-        DPrintf("checkpoint, database[%s] = %s\n", args.Key, pb.database[args.Key])
+    if seen && completed{        
         return nil
     } else {
         pb.seenRPCs[id] = false
     }
     sender := args.Sender
     if sender == Client {
-        key, value, op := args.Key, args.Value, args.Op
-        DPrintf("Yeah\n")
-        if pb.identity == Primary {
-            DPrintf("Yeah1\n")
+        key, value, op := args.Key, args.Value, args.Op        
+        if pb.identity == Primary {            
             pb.DoPutAppend(key, value, op, id)
-        } else if v, _ := pb.vs.Get(); v.Primary == pb.me {
-            DPrintf("Yeah2\n")
+        } else if v, _ := pb.vs.Get(); v.Primary == pb.me {            
             pb.identity = Primary  
             pb.currentView = v      
             pb.DoPutAppend(key, value, op, id)                
@@ -158,6 +165,13 @@ func (pb *PBServer) getIdentity(view viewservice.View) Identity {
     }
 }
 
+func (pb *PBServer) updateView() {
+    vx, _ := pb.vs.Get()
+    view, _ := pb.vs.Ping(vx.Viewnum)
+    pb.identity = pb.getIdentity(view)
+    pb.currentView = view
+}
+
 //
 // ping the viewserver periodically.
 // if view changed:
@@ -170,14 +184,33 @@ func (pb *PBServer) tick() {
 	// Your code here.
     vx, _ := pb.vs.Get()
     view, _ := pb.vs.Ping(vx.Viewnum)
-    pb.identity = pb.getIdentity(view)
+    //pb.identity = pb.getIdentity(view)
+    newIdentity := pb.getIdentity(view)
     //fmt.Printf("I'm %s, and I'm a %s\n", pb.me, pb.identity)
-    if pb.identity == Primary && pb.currentView.Backup != view.Backup {
-        args := TransferArgs{pb.database, Primary}
+    
+    if newIdentity == Primary && pb.currentView.Backup != view.Backup {
+        fmt.Printf("primary:%s\nold backup:%s\nnew backup:%s\n", pb.me, pb.currentView.Backup, view.Backup)
+    }
+    pb.identity = newIdentity
+    
+    if pb.identity == Primary && pb.currentView.Backup != view.Backup && view.Backup != ""{
+        args := TransferArgs{pb.database, pb.seenRPCs, Primary}
         var reply TransferReply
-        call(view.Backup, "PBServer.Transfer", &args, &reply)
+        fmt.Printf("Transferring to %s\n", view.Backup)
+        ok := call(view.Backup, "PBServer.Transfer", &args, &reply)
+        for !ok {
+            //ck.UpdateView()
+            fmt.Printf("1.stuck here!!!!!!!!!!1\n")
+            fmt.Printf("Transferring to %s\n", view.Backup)
+            pb.PrintDatabase()
+            ok = call(view.Backup, "PBServer.Transfer", &args, &reply)
+            if reply.Err != OK {
+                ok = false
+            }
+        }   
     }
     pb.currentView = view
+    
 }
 
 // tell the server to shut itself down.

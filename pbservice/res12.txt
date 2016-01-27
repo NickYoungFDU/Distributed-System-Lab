@@ -1,0 +1,667 @@
+New View:{0  }
+New View:{1  }
+New View:{1  }
+New View:{2  }
+New View:{2  }
+New View:{3  }
+New View:{3  }
+New View:{4  }
+New View:{4  }
+New View:{5  }
+New View:{5  }
+New View:{6  }
+New View:{6  }
+New View:{7  }
+New View:{7  }
+New View:{8  }
+New View:{8  }
+New View:{9  }
+New View:{9  }
+New View:{10  }
+Test: Repeated failures/restarts with concurrent updates to same key; unreliable ...
+primary:/var/tmp/824-1000/pb-25825-rcu-1
+old backup:
+new backup:/var/tmp/824-1000/pb-25825-rcu-2
+Transferring to /var/tmp/824-1000/pb-25825-rcu-2
+Transfer to /var/tmp/824-1000/pb-25825-rcu-2 success!
+Primary /var/tmp/824-1000/pb-25825-rcu-1's database:
+Backup /var/tmp/824-1000/pb-25825-rcu-2's database:
+New View:{3 /var/tmp/824-1000/pb-25825-rcu-2 /var/tmp/824-1000/pb-25825-rcu-3}
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+write unix @->/var/tmp/824-1000/pb-25825-rcu-3: write: broken pipe
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+write unix @->/var/tmp/824-1000/pb-25825-rcu-3: write: broken pipe
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+write unix @->/var/tmp/824-1000/pb-25825-rcu-3: write: broken pipe
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+write unix @->/var/tmp/824-1000/pb-25825-rcu-3: write: broken pipe
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-25825-rcu-3: write: broken pipe
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-3: read: connection reset by peer
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+unexpected EOF
+unexpected EOF
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+2.stuck here!!!!!!!!!!1
+New View:{4 /var/tmp/824-1000/pb-25825-rcu-2 /var/tmp/824-1000/pb-25825-rcu-1}
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+read unix @->/var/tmp/824-1000/pb-25825-rcu-2: read: connection reset by peer
+unexpected EOF
+unexpected EOF
+write unix @->/var/tmp/824-1000/pb-25825-rcu-2: write: broken pipe
+New View:{5 /var/tmp/824-1000/pb-25825-rcu-1 /var/tmp/824-1000/pb-25825-rcu-3}
+New View:{6 /var/tmp/824-1000/pb-25825-rcu-3 /var/tmp/824-1000/pb-25825-rcu-2}
+New View:{7 /var/tmp/824-1000/pb-25825-rcu-2 /var/tmp/824-1000/pb-25825-rcu-1}
+  ... Appends done ... 
+counts = [607 607]
+missing: 0, 0
+--- FAIL: TestRepeatedCrashUnreliable (11.54s)
+	test_test.go:447: missing element in Append result
+FAIL
+exit status 1
+FAIL	pbservice	11.563s

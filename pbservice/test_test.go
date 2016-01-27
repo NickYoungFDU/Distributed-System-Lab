@@ -237,6 +237,9 @@ func TestAtMostOnce(t *testing.T) {
 
 // Put right after a backup dies.
 func TestFailPut(t *testing.T) {
+    if gothrough == 1 {
+        return
+    }
 	runtime.GOMAXPROCS(4)
 
 	tag := "failput"
@@ -332,6 +335,9 @@ func TestFailPut(t *testing.T) {
 // then check that primary and backup have identical values.
 // i.e. that they processed the Put()s in the same order.
 func TestConcurrentSame(t *testing.T) {
+    if gothrough == 1 {
+        return
+    }
 	runtime.GOMAXPROCS(4)
 
 	tag := "cs"
@@ -437,6 +443,7 @@ func checkAppends(t *testing.T, v string, counts []int) {
 			wanted := "x " + strconv.Itoa(i) + " " + strconv.Itoa(j) + " y"
 			off := strings.Index(v, wanted)
 			if off < 0 {
+                DPrintf("missing: %d, %d\n", i, j)
 				t.Fatalf("missing element in Append result")
 			}
 			off1 := strings.LastIndex(v, wanted)
@@ -455,6 +462,9 @@ func checkAppends(t *testing.T, v string, counts []int) {
 // then check that primary and backup have identical values.
 // i.e. that they processed the Append()s in the same order.
 func TestConcurrentSameAppend(t *testing.T) {
+    if gothrough == 1 {
+        return
+    }
 	runtime.GOMAXPROCS(4)
 
 	tag := "csa"
@@ -562,6 +572,9 @@ func TestConcurrentSameAppend(t *testing.T) {
 }
 
 func TestConcurrentSameUnreliable(t *testing.T) {
+    if gothrough == 1 {
+        return
+    }
 	runtime.GOMAXPROCS(4)
 
 	tag := "csu"
@@ -677,6 +690,9 @@ func TestConcurrentSameUnreliable(t *testing.T) {
 
 // constant put/get while crashing and restarting servers
 func TestRepeatedCrash(t *testing.T) {
+    if gothrough == 1 {
+        return
+    }
 	runtime.GOMAXPROCS(4)
 
 	tag := "rc"
@@ -788,7 +804,34 @@ func TestRepeatedCrash(t *testing.T) {
 	time.Sleep(time.Second)
 }
 
+func CheckAppendImmediately(i, j int, v string, view viewservice.View) {
+    wanted := "x " + strconv.Itoa(i) + " " + strconv.Itoa(j) + " y"
+    off := strings.Index(v, wanted)
+    if off < 0 {
+        fmt.Printf("Failed append by client %d, value = %d\n", i, j)        
+        fmt.Printf("Current View:%v\n", view)
+    }
+}
+
+func GetPrimaryBackup(sa [3]*PBServer, view viewservice.View) (p, b *PBServer) {
+    foundP, foundB := false, false
+    for _, s := range sa {
+        if s.me == view.Primary {
+            foundP = true
+            p = s
+        } else if s.me == view.Backup {
+            foundB = true
+            b = s
+        }        
+        if foundB && foundP {
+            break
+        }
+    }
+    return
+}
+
 func TestRepeatedCrashUnreliable(t *testing.T) {
+    
 	runtime.GOMAXPROCS(4)
 
 	tag := "rcu"
@@ -817,8 +860,16 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 
 	// wait a bit for primary to initialize backup
 	time.Sleep(viewservice.DeadPings * viewservice.PingInterval)
+    v, _ := vck.Get()
+    p, b := GetPrimaryBackup(sa, v)
+    fmt.Printf("Primary %s's database:\n", p.me)
+    p.PrintDatabase()
+    fmt.Printf("Backup %s's database:\n", b.me)
+    b.PrintDatabase()
 
 	done := int32(0)
+    
+    Debug = 3
 
 	go func() {
 		// kill and restart servers
@@ -830,6 +881,15 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 
 			// wait long enough for new view to form, backup to be initialized
 			time.Sleep(2 * viewservice.PingInterval * viewservice.DeadPings)
+            
+            
+            vvv, _ := vck.Get()
+                p, b := GetPrimaryBackup(sa, vvv)
+                fmt.Printf("Primary %s's database:\n", p.me)
+                p.PrintDatabase()
+                fmt.Printf("Backup %s's database:\n", b.me)
+                b.PrintDatabase()
+                
 
 			sss := StartServer(vshost, port(tag, i+1))
 			samu.Lock()
@@ -838,6 +898,13 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 
 			// wait long enough for new view to form, backup to be initialized
 			time.Sleep(2 * viewservice.PingInterval * viewservice.DeadPings)
+                        vvvv, _ := vck.Get()
+                p, b = GetPrimaryBackup(sa, vvvv)
+                fmt.Printf("Primary %s's database:\n", p.me)
+                p.PrintDatabase()
+                fmt.Printf("Backup %s's database:\n", b.me)
+                b.PrintDatabase()
+                
 		}
 	}()
 
@@ -849,7 +916,8 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 		n := 0
 		for atomic.LoadInt32(&done) == 0 {
 			v := "x " + strconv.Itoa(i) + " " + strconv.Itoa(n) + " y"
-			ck.Append("0", v)
+			ck.Append("0", v)                       
+            
 			// if no sleep here, then server tick() threads do not get
 			// enough time to Ping the viewserver.
 			time.Sleep(10 * time.Millisecond)
@@ -865,7 +933,7 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 		go ff(i, cha[i])
 	}
 
-	time.Sleep(20 * time.Second)
+	time.Sleep(10 * time.Second) //2 -> 20
 	atomic.StoreInt32(&done, 1)
 
 	fmt.Printf("  ... Appends done ... \n")
@@ -878,8 +946,13 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 		}
 		counts = append(counts, n)
 	}
+        
+    
+    DPrintf("counts = %v\n", counts)
 
 	ck := MakeClerk(vshost, "")
+    
+    
 
 	checkAppends(t, ck.Get("0"), counts)
 
@@ -960,6 +1033,9 @@ func proxy(t *testing.T, port string, delay *int32) {
 }
 
 func TestPartition1(t *testing.T) {
+    if gothrough == 1 {
+        return
+    }
 	runtime.GOMAXPROCS(4)
 
 	tag := "part1"
@@ -1053,6 +1129,9 @@ func TestPartition1(t *testing.T) {
 }
 
 func TestPartition2(t *testing.T) {
+    if gothrough == 1 {
+        return
+    }
 	runtime.GOMAXPROCS(4)
 
 	tag := "part2"

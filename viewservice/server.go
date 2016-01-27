@@ -49,7 +49,14 @@ func (vs *ViewServer) PromoteBackup() {
 }
 
 func (vs *ViewServer) RemoveBackup() {
-    vs.changeView(vs.currentView.Viewnum + 1, vs.currentView.Primary, "")
+    newBackup := ""
+    for k := range vs.recentPing {
+        if k != vs.currentView.Primary && k != vs.currentView.Backup {
+            newBackup = k
+            break
+        }
+    }
+    vs.changeView(vs.currentView.Viewnum + 1, vs.currentView.Primary, newBackup)
 }
 
 //
@@ -121,9 +128,11 @@ func (vs *ViewServer) tick() {
     if time.Since(vs.recentPing[primary]) > DeadPings * PingInterval {
         vs.PromoteBackup()
         //fmt.Printf("Current Primary(Promoted):%s\n", vs.currentView.Primary)
+        fmt.Printf("New View:%v\n", vs.currentView)
     }  
     if time.Since(vs.recentPing[backup]) > DeadPings * PingInterval {
         vs.RemoveBackup()
+        fmt.Printf("New View:%v\n", vs.currentView)
     }
     
     vs.mu.Unlock()

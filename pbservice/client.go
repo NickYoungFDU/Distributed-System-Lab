@@ -114,13 +114,11 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
     }
         
     
-    ok := call(ck.currentView.Primary, "PBServer.PutAppend", &args, &reply)    
-    DPrintf("chp0.0\n")    
+    ok := call(ck.currentView.Primary, "PBServer.PutAppend", &args, &reply)        
     for !ok {
         ck.UpdateView()
         ok = call(ck.currentView.Primary, "PBServer.PutAppend", &args, &reply)
-    }
-    DPrintf("success with server %s, key = %s, value = %s, reply = %s\n", ck.currentView.Primary, key, value, reply.Err)           
+    }               
 }
 
 //
