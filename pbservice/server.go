@@ -179,8 +179,6 @@ func (pb *PBServer) updateView() {
 //   manage transfer of state from primary to new backup.
 //
 func (pb *PBServer) tick() {
-    pb.mu.Lock()
-    defer pb.mu.Unlock()
 	// Your code here.
     vx, _ := pb.vs.Get()
     view, _ := pb.vs.Ping(vx.Viewnum)

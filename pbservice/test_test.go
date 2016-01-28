@@ -860,16 +860,8 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 
 	// wait a bit for primary to initialize backup
 	time.Sleep(viewservice.DeadPings * viewservice.PingInterval)
-    v, _ := vck.Get()
-    p, b := GetPrimaryBackup(sa, v)
-    fmt.Printf("Primary %s's database:\n", p.me)
-    p.PrintDatabase()
-    fmt.Printf("Backup %s's database:\n", b.me)
-    b.PrintDatabase()
 
 	done := int32(0)
-    
-    Debug = 3
 
 	go func() {
 		// kill and restart servers
@@ -880,16 +872,7 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 			sa[i].kill()
 
 			// wait long enough for new view to form, backup to be initialized
-			time.Sleep(2 * viewservice.PingInterval * viewservice.DeadPings)
-            
-            
-            vvv, _ := vck.Get()
-                p, b := GetPrimaryBackup(sa, vvv)
-                fmt.Printf("Primary %s's database:\n", p.me)
-                p.PrintDatabase()
-                fmt.Printf("Backup %s's database:\n", b.me)
-                b.PrintDatabase()
-                
+			time.Sleep(2 * viewservice.PingInterval * viewservice.DeadPings)                            
 
 			sss := StartServer(vshost, port(tag, i+1))
 			samu.Lock()
@@ -897,14 +880,7 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 			samu.Unlock()
 
 			// wait long enough for new view to form, backup to be initialized
-			time.Sleep(2 * viewservice.PingInterval * viewservice.DeadPings)
-                        vvvv, _ := vck.Get()
-                p, b = GetPrimaryBackup(sa, vvvv)
-                fmt.Printf("Primary %s's database:\n", p.me)
-                p.PrintDatabase()
-                fmt.Printf("Backup %s's database:\n", b.me)
-                b.PrintDatabase()
-                
+			time.Sleep(2 * viewservice.PingInterval * viewservice.DeadPings)                
 		}
 	}()
 
