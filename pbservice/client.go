@@ -3,6 +3,7 @@ package pbservice
 import "viewservice"
 import "net/rpc"
 import "fmt"
+import "time"
 
 
 import "crypto/rand"
@@ -87,18 +88,30 @@ func (ck *Clerk) Get(key string) string {
     if ck.currentView.Viewnum == 0 {
         ck.UpdateView()
     }
-                
+    //fmt.Printf("Getting from %s\n", ck.currentView.Primary)           
     ok := call(ck.currentView.Primary, "PBServer.Get", &args, &reply)
     for !ok {
         ck.UpdateView()        
-        
+        time.Sleep(viewservice.PingInterval)
         ok = call(ck.currentView.Primary, "PBServer.Get", &args, &reply)
     }    
-    if reply.Err == OK {        
+    //fmt.Printf("Here\n")    
+    /*
+    if reply.Err == OK {    
+        fmt.Printf("Here2\n")    
         return reply.Value
     } else {
-        return ck.Get(key)
+        time.Sleep(viewservice.PingInterval)
+        //return ck.Get(key)
+        call(ck.currentView.Primary, "PBServer.Get", &args, &reply)
     }
+    */
+    for reply.Err != OK {
+        fmt.Printf("Oh...\n")
+        time.Sleep(viewservice.PingInterval)
+        call(ck.currentView.Primary, "PBServer.Get", &args, &reply)
+    }
+    return reply.Value
 }
 
 //
@@ -109,16 +122,27 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 	// Your code here.
     id := nrand()
     args, reply := PutAppendArgs{key, value, id, Client, op}, PutAppendReply{}    
-    if ck.currentView.Viewnum == 0 {
+    if ck.currentView.Primary == "" {
         ck.currentView, _ = ck.vs.Get()
-    }
+    }   
         
-    
+    //fmt.Printf("Calling Primary:%s\n", ck.currentView.Primary)
     ok := call(ck.currentView.Primary, "PBServer.PutAppend", &args, &reply)        
+    
+    //if reply.Err != OK {
+    //    fmt.Printf("Point 1, Primary:%s, reply:%v\n", ck.currentView.Primary, reply.Err)
+    //    ok = false
+    //}
     for !ok {
         ck.UpdateView()
+        time.Sleep(viewservice.PingInterval)
         ok = call(ck.currentView.Primary, "PBServer.PutAppend", &args, &reply)
-    }               
+        //if reply.Err != OK {
+        ///    ok = false
+        //    fmt.Printf("Point 1\n")
+        //}
+    }
+    //fmt.Printf("Got reply:%s\n", reply)               
 }
 
 //

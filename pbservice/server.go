@@ -30,17 +30,12 @@ type PBServer struct {
 func (pb *PBServer) Transfer(args *TransferArgs, reply *TransferReply) error {
     pb.mu.Lock()
     defer pb.mu.Unlock()
-    sender := args.Sender
-    pb.updateView()
-    if sender == Primary && pb.identity == Backup {
+
         pb.database = args.Database
         pb.seenRPCs = args.SeenRPCs
         reply.Err = OK
-        fmt.Printf("Transfer to %s success!\n", pb.me)
-        pb.PrintDatabase()
-    } else {
-        reply.Err = ErrWrongServer
-    }
+        //fmt.Printf("Transfer to %s success!\n", pb.me)
+        //pb.PrintDatabase()
     return nil
 }
 
@@ -51,6 +46,7 @@ func (pb *PBServer) Get(args *GetArgs, reply *GetReply) error {
     sender := args.Sender
     if sender == Client {
         if pb.identity == Primary {
+            //fmt.Printf("I'm Primary\n")
             key := args.Key
             v, ok := pb.database[key]
             if ok {
@@ -65,6 +61,7 @@ func (pb *PBServer) Get(args *GetArgs, reply *GetReply) error {
             var replyx GetReply            
             call(pb.currentView.Backup, "PBServer.Get", &argsx, &replyx)
         } else {
+            //fmt.Printf("I'm not Primary\n")
             reply.Value = ""
             reply.Err = ErrWrongServer
         }        
@@ -94,20 +91,23 @@ func (pb *PBServer) DoPutAppend(key, value, op string, id int64) {
                     pb.database[key] = value
                 }
             }
-            pb.seenRPCs[id] = true
-            //pb.PrintDatabase()
+            pb.seenRPCs[id] = true            
             // forward this operation to the backup
             argsx := PutAppendArgs{key, value, id, Primary, op}
-            var replyx PutAppendReply     
-            if pb.currentView.Backup == "" {
-                return
-            }                             
-            ok := call(pb.currentView.Backup, "PBServer.PutAppend", &argsx, &replyx)
-            //call(pb.currentView.Backup, "PBServer.PutAppend", &argsx, &replyx)
+            var replyx PutAppendReply                                           
+            ok := call(pb.currentView.Backup, "PBServer.PutAppend", &argsx, &replyx)         
+            //if replyx.Err != OK {
+            //    ok = false
+            //}   
             for !ok {
-                fmt.Printf("2.stuck here!!!!!!!!!!1\n")
-                pb.updateView()
+                time.Sleep(viewservice.PingInterval)
+                if pb.currentView.Backup == "" {
+                    break
+                }
                 ok = call(pb.currentView.Backup, "PBServer.PutAppend", &argsx, &replyx)
+                //if replyx.Err != OK {
+                //    ok = false
+                //}
             }    
 }
 
@@ -117,20 +117,17 @@ func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error 
 	// Your code here.
     id := args.Id
     completed, seen := pb.seenRPCs[id]
-    if seen && completed{        
+    if seen && completed{                
         return nil
     } else {
         pb.seenRPCs[id] = false
     }
     sender := args.Sender
-    if sender == Client {
+    if sender == Client {        
         key, value, op := args.Key, args.Value, args.Op        
         if pb.identity == Primary {            
-            pb.DoPutAppend(key, value, op, id)
-        } else if v, _ := pb.vs.Get(); v.Primary == pb.me {            
-            pb.identity = Primary  
-            pb.currentView = v      
-            pb.DoPutAppend(key, value, op, id)                
+            pb.DoPutAppend(key, value, op, id)            
+            reply.Err = OK
         } else {
             reply.Err = ErrWrongServer
         }
@@ -148,7 +145,9 @@ func (pb *PBServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) error 
                 } else {
                     pb.database[key] = value
                 }
-            }                        
+            }
+            pb.seenRPCs[id] = true
+            reply.Err = OK                        
         }
     }     
 	return nil
@@ -165,13 +164,6 @@ func (pb *PBServer) getIdentity(view viewservice.View) Identity {
     }
 }
 
-func (pb *PBServer) updateView() {
-    vx, _ := pb.vs.Get()
-    view, _ := pb.vs.Ping(vx.Viewnum)
-    pb.identity = pb.getIdentity(view)
-    pb.currentView = view
-}
-
 //
 // ping the viewserver periodically.
 // if view changed:
@@ -179,34 +171,26 @@ func (pb *PBServer) updateView() {
 //   manage transfer of state from primary to new backup.
 //
 func (pb *PBServer) tick() {
-	// Your code here.
+	// Your code here.    
     vx, _ := pb.vs.Get()
-    view, _ := pb.vs.Ping(vx.Viewnum)
-    //pb.identity = pb.getIdentity(view)
-    newIdentity := pb.getIdentity(view)
-    //fmt.Printf("I'm %s, and I'm a %s\n", pb.me, pb.identity)
+    view, _ := pb.vs.Ping(vx.Viewnum)    
     
-    if newIdentity == Primary && pb.currentView.Backup != view.Backup {
-        fmt.Printf("primary:%s\nold backup:%s\nnew backup:%s\n", pb.me, pb.currentView.Backup, view.Backup)
+    if pb.me == view.Primary || pb.me == view.Backup {
+        //fmt.Printf("I'm %s\nMy View: %v\nActual View: %v\n", pb.me, pb.currentView, view)
     }
-    pb.identity = newIdentity
+    pb.identity = pb.getIdentity(view)        
     
-    if pb.identity == Primary && pb.currentView.Backup != view.Backup && view.Backup != ""{
-        args := TransferArgs{pb.database, pb.seenRPCs, Primary}
+    if pb.me == view.Primary && pb.currentView.Backup != view.Backup && view.Backup != "" {
+        args := TransferArgs{pb.database, pb.seenRPCs}
         var reply TransferReply
-        fmt.Printf("Transferring to %s\n", view.Backup)
+      //  fmt.Printf("Transferring to %s\n", view.Backup)
         ok := call(view.Backup, "PBServer.Transfer", &args, &reply)
-        for !ok {
-            //ck.UpdateView()
-            fmt.Printf("1.stuck here!!!!!!!!!!1\n")
-            fmt.Printf("Transferring to %s\n", view.Backup)
-            pb.PrintDatabase()
-            ok = call(view.Backup, "PBServer.Transfer", &args, &reply)
-            if reply.Err != OK {
-                ok = false
-            }
+        for !ok {            
+            fmt.Printf("Transferring to %s\n", view.Backup)            
+            ok = call(view.Backup, "PBServer.Transfer", &args, &reply)            
         }   
     }
+        
     pb.currentView = view
     
 }

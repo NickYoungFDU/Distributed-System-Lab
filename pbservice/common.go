@@ -53,7 +53,7 @@ type GetReply struct {
 type TransferArgs struct {
     Database map[string]string
     SeenRPCs map[int64]bool
-    Sender Identity
+    // no need to contain 'Sender'    
 }
 
 type TransferReply struct {

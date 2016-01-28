@@ -15,7 +15,7 @@ import "strconv"
 import "strings"
 import "sync/atomic"
 
-const gothrough = 1
+const gothrough = 100
 
 func check(ck *Clerk, key string, value string) {
 	v := ck.Get(key)
@@ -690,7 +690,7 @@ func TestConcurrentSameUnreliable(t *testing.T) {
 
 // constant put/get while crashing and restarting servers
 func TestRepeatedCrash(t *testing.T) {
-    if gothrough == 1 {
+    if gothrough == 2 {
         return
     }
 	runtime.GOMAXPROCS(4)
@@ -831,7 +831,9 @@ func GetPrimaryBackup(sa [3]*PBServer, view viewservice.View) (p, b *PBServer) {
 }
 
 func TestRepeatedCrashUnreliable(t *testing.T) {
-    
+    if gothrough == 0 {
+        return
+    }
 	runtime.GOMAXPROCS(4)
 
 	tag := "rcu"
@@ -892,8 +894,9 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 		n := 0
 		for atomic.LoadInt32(&done) == 0 {
 			v := "x " + strconv.Itoa(i) + " " + strconv.Itoa(n) + " y"
+        //    fmt.Printf("Point a, trying: %s\n", v)
 			ck.Append("0", v)                       
-            
+        //    fmt.Printf("Point b\n")
 			// if no sleep here, then server tick() threads do not get
 			// enough time to Ping the viewserver.
 			time.Sleep(10 * time.Millisecond)
@@ -909,7 +912,7 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 		go ff(i, cha[i])
 	}
 
-	time.Sleep(10 * time.Second) //2 -> 20
+	time.Sleep(20 * time.Second) //2 -> 20
 	atomic.StoreInt32(&done, 1)
 
 	fmt.Printf("  ... Appends done ... \n")
@@ -917,6 +920,7 @@ func TestRepeatedCrashUnreliable(t *testing.T) {
 	counts := []int{}
 	for i := 0; i < nth; i++ {
 		n := <-cha[i]
+      //  fmt.Printf("checkPoint\n")
 		if n < 0 {
 			t.Fatal("child failed")
 		}
